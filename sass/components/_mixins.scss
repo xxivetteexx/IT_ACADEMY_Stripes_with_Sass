@@ -1,4 +1,4 @@
-//---- Determino les propietats dels rectangles ----//
+
 @mixin body {
     display: block;
 }
@@ -11,7 +11,7 @@
     line-height: 1.5;
     min-height: 100vh;
 }
-
+ // -- Content properties:position,size and color --//
 @mixin stripes_content($background){
     display:flex;
     justify-content:center; 

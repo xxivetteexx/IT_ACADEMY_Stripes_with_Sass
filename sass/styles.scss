@@ -1,6 +1,8 @@
+// Importing the component files
 @import "components/mixins";
 @import "components/variables";
 
+/*universal selector: including content*/
 *,
 *::before{
     margin:1px;
@@ -18,14 +20,12 @@
     .stripes_container{
         @include  stripes_container;
     }
-
-    
+        // Stripes pseudoclass child: background color and stripe opacity position 
         .stripes_content:nth-child(1) {
             left:0;
             @include stripes_content($color1);
         }
 
-        
         .stripes_content:nth-child(2){
             left:20vw;
             @include stripes_content($color2);
@@ -46,6 +46,7 @@
             @include stripes_content($color5);
         }
     
+    // Stripes opacity and animation
     .stripes_block::before{
         @include before;
     }
