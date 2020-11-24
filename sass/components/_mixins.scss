@@ -1,0 +1,22 @@
+//---- Determino les propietats dels rectangles ----//
+@mixin body {
+    display: block;
+    margin: 10px;
+}
+
+@mixin stripes{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rectangle($background){
+    display:flex;
+    flex-direction: 1 1 auto;
+    background: $background;
+    // -- Type properties --//
+    color: $font-color;
+    font-family: $font-family;
+}
+

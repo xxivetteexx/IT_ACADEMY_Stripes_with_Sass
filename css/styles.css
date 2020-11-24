@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  display: block;
+  margin: 10px;
+}
+
+.block1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+  flex-direction: 1 1 auto;
+  background: #244F75;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.block2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+  flex-direction: 1 1 auto;
+  background: #60BFBF;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.block3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+  flex-direction: 1 1 auto;
+  background: #8C4B7E;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.block4 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+  flex-direction: 1 1 auto;
+  background: #F8BB44;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.block5 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+  flex-direction: 1 1 auto;
+  background: #F24B4B;
+  color: white;
+  font-family: "Lato", sans-serif;
+}

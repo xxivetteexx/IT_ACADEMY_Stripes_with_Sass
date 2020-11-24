@@ -1,0 +1,42 @@
+@import "components/mixins";
+@import "components/variables";
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.stripes {
+	min-height: 100vh;
+}
+
+.body{
+  @include body;
+}
+
+.block1{
+    @include stripes;
+    @include rectangle($color1);
+}
+
+.block2{
+    @include stripes;
+    @include rectangle($color2);
+}
+
+.block3{
+    @include stripes;
+    @include rectangle($color3);
+}
+
+.block4{
+    @include stripes;
+    @include rectangle($color4);
+}
+
+.block5{
+    @include stripes;
+    @include rectangle($color5);
+}
+
