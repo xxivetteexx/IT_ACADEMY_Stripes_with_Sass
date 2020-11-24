@@ -1,42 +1,55 @@
 @import "components/mixins";
 @import "components/variables";
 
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-.stripes {
-	min-height: 100vh;
+*,
+*::before{
+    margin:1px;
+    padding:0px;
+    box-sizing:border-box;
+  
+    /* Amb això ens asegurem que funciona per tots els navegadors */
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 
 .body{
   @include body;
 }
+    .stripes_container{
+        @include  stripes_container;
+    }
 
-.block1{
-    @include stripes;
-    @include rectangle($color1);
-}
+    
+        .stripes_content:nth-child(1) {
+            left:0;
+            @include stripes_content($color1);
+        }
 
-.block2{
-    @include stripes;
-    @include rectangle($color2);
-}
+        
+        .stripes_content:nth-child(2){
+            left:20vw;
+            @include stripes_content($color2);
+        }
 
-.block3{
-    @include stripes;
-    @include rectangle($color3);
-}
+        .stripes_content:nth-child(3){
+            left:40vw;
+            @include  stripes_content($color3);
+        }
 
-.block4{
-    @include stripes;
-    @include rectangle($color4);
-}
+        .stripes_content:nth-child(4){
+            left:60vw;
+            @include  stripes_content($color4);
+        }
 
-.block5{
-    @include stripes;
-    @include rectangle($color5);
-}
+        .stripes_content:nth-child(5){
+            left:80vw;
+            @include stripes_content($color5);
+        }
+    
+    .stripes_block::before{
+        @include before;
+    }
 
+    .stripes_block:hover::before{
+        @include hover;
+    }

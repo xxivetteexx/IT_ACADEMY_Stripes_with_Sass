@@ -1,75 +1,112 @@
-* {
-  box-sizing: border-box;
-  margin: 0px;
+@charset "UTF-8";
+*,
+*::before {
+  margin: 1px;
   padding: 0px;
+  box-sizing: border-box;
+  /* Amb això ens asegurem que funciona per tots els navegadors */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .body {
   display: block;
-  margin: 10px;
 }
 
-.block1 {
+.stripes_container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.stripes_content:nth-child(1) {
+  left: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
   width: 20%;
-  display: flex;
-  flex-direction: 1 1 auto;
   background: #244F75;
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
 }
 
-.block2 {
+.stripes_content:nth-child(2) {
+  left: 20vw;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
   width: 20%;
-  display: flex;
-  flex-direction: 1 1 auto;
   background: #60BFBF;
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
 }
 
-.block3 {
+.stripes_content:nth-child(3) {
+  left: 40vw;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
   width: 20%;
-  display: flex;
-  flex-direction: 1 1 auto;
   background: #8C4B7E;
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
 }
 
-.block4 {
+.stripes_content:nth-child(4) {
+  left: 60vw;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
   width: 20%;
-  display: flex;
-  flex-direction: 1 1 auto;
   background: #F8BB44;
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
 }
 
-.block5 {
+.stripes_content:nth-child(5) {
+  left: 80vw;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
   width: 20%;
-  display: flex;
-  flex-direction: 1 1 auto;
   background: #F24B4B;
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
+}
+
+.stripes_block::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.05;
+  transform-origin: center center;
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.stripes_block:hover::before {
+  opacity: 0.1;
+  transform: skew(0deg) scaleY(1) translate(0, 0);
 }
