@@ -1,0 +1,9 @@
+/*@for loop in SASS*/
+
+$left: 0vh;
+@for $i from 1 through 5{
+    //interpolations
+    .stripes_content:nth-child(5n + #{$i}){
+        left: nth-child($left, $i + 20vh);
+    }
+}

@@ -1,4 +1,25 @@
 @charset "UTF-8";
+/*@for loop in SASS*/
+.stripes_content:nth-child(5n+1) {
+  left: nth-child(0vh, 21vh);
+}
+
+.stripes_content:nth-child(5n+2) {
+  left: nth-child(0vh, 22vh);
+}
+
+.stripes_content:nth-child(5n+3) {
+  left: nth-child(0vh, 23vh);
+}
+
+.stripes_content:nth-child(5n+4) {
+  left: nth-child(0vh, 24vh);
+}
+
+.stripes_content:nth-child(5n+5) {
+  left: nth-child(0vh, 25vh);
+}
+
 /*universal selector: including content*/
 *,
 *::before {
@@ -35,6 +56,26 @@
   background: #244F75;
   color: #fff;
   font-family: "Lato", sans-serif;
+  /*if I leave the content empty & the position doesnt change, no margin (top or left), an extra white layer 30degrees rotation skewed will be added
+  The "&" means "stripes_content" so it repeats the father selector. In CSS would be "stripes_content::fore"*/
+  /*when hover over the content, the white layer will be visible on full stripe*/
+}
+.stripes_content:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.05;
+  transform-origin: center center;
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.stripes_content:nth-child(1):hover::before {
+  opacity: 0.1;
+  transform: skew(0deg) scaleY(1) translate(0, 0);
 }
 
 .stripes_content:nth-child(2) {
@@ -49,6 +90,26 @@
   background: #60BFBF;
   color: #fff;
   font-family: "Lato", sans-serif;
+  /*if I leave the content empty & the position doesnt change, no margin (top or left), an extra white layer 30degrees rotation skewed will be added
+  The "&" means "stripes_content" so it repeats the father selector. In CSS would be "stripes_content::fore"*/
+  /*when hover over the content, the white layer will be visible on full stripe*/
+}
+.stripes_content:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.05;
+  transform-origin: center center;
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.stripes_content:nth-child(2):hover::before {
+  opacity: 0.1;
+  transform: skew(0deg) scaleY(1) translate(0, 0);
 }
 
 .stripes_content:nth-child(3) {
@@ -63,6 +124,26 @@
   background: #8C4B7E;
   color: #fff;
   font-family: "Lato", sans-serif;
+  /*if I leave the content empty & the position doesnt change, no margin (top or left), an extra white layer 30degrees rotation skewed will be added
+  The "&" means "stripes_content" so it repeats the father selector. In CSS would be "stripes_content::fore"*/
+  /*when hover over the content, the white layer will be visible on full stripe*/
+}
+.stripes_content:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.05;
+  transform-origin: center center;
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.stripes_content:nth-child(3):hover::before {
+  opacity: 0.1;
+  transform: skew(0deg) scaleY(1) translate(0, 0);
 }
 
 .stripes_content:nth-child(4) {
@@ -77,6 +158,26 @@
   background: #F8BB44;
   color: #fff;
   font-family: "Lato", sans-serif;
+  /*if I leave the content empty & the position doesnt change, no margin (top or left), an extra white layer 30degrees rotation skewed will be added
+  The "&" means "stripes_content" so it repeats the father selector. In CSS would be "stripes_content::fore"*/
+  /*when hover over the content, the white layer will be visible on full stripe*/
+}
+.stripes_content:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.05;
+  transform-origin: center center;
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.stripes_content:nth-child(4):hover::before {
+  opacity: 0.1;
+  transform: skew(0deg) scaleY(1) translate(0, 0);
 }
 
 .stripes_content:nth-child(5) {
@@ -91,9 +192,11 @@
   background: #F24B4B;
   color: #fff;
   font-family: "Lato", sans-serif;
+  /*if I leave the content empty & the position doesnt change, no margin (top or left), an extra white layer 30degrees rotation skewed will be added
+  The "&" means "stripes_content" so it repeats the father selector. In CSS would be "stripes_content::fore"*/
+  /*when hover over the content, the white layer will be visible on full stripe*/
 }
-
-.stripes_block::before {
+.stripes_content:nth-child(5)::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -106,8 +209,7 @@
   transform: skew(30deg) scaleY(1) translate(0, 0);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-.stripes_block:hover::before {
+.stripes_content:nth-child(5):hover::before {
   opacity: 0.1;
   transform: skew(0deg) scaleY(1) translate(0, 0);
 }

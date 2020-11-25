@@ -1,6 +1,7 @@
 // Importing the component files
 @import "components/mixins";
 @import "components/variables";
+@import "components/for";
 
 /*universal selector: including content*/
 *,
@@ -46,11 +47,3 @@
             @include stripes_content($color5);
         }
     
-    // Stripes opacity and animation
-    .stripes_block::before{
-        @include before;
-    }
-
-    .stripes_block:hover::before{
-        @include hover;
-    }
