@@ -11,6 +11,7 @@ Stripes animated with CSS but using Sass compilation
 
 
 ###### PROJECT DEMO URL : https://xxivetteexx.github.io/IT_ACADEMY_Stripes_with_Sass/
+###### PROJECT DEMO WITH CODEANDBOX :https://codesandbox.io/s/competent-sammet-s0tbk
 <hr>
 
 ### THE EXERCICE:
