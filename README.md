@@ -15,3 +15,11 @@ Stripes animated with CSS but using Sass compilation
 ```Exercice 1```
 
 Compilate the styles.css with Sass
+
+## Tools 🛠️
+* HTML5
+* CSS
+* Sass
+
+## Author :raising_hand_woman:
+[Ivette](https://github.com/xxivetteexx)
